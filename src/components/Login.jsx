@@ -47,25 +47,6 @@ const Login = () => {
         toast.error("Please check your email and Passward");
       });
 
-    // .then(result => {
-    //   console.log(result.user);
-    //   navigate('/');
-    // })
-    // .catch(error => {
-    //   console.log(error);
-    //  })
-
-    // console.log(result.user);
-    // setSuccses('Logged in Successfully')
-    // e.target.reset();
-    //navigate('/');
-
-    //     })
-    //     .catch(error => {
-    //       console.error(error);
-    //       // setLogError(error.message);
-    //       setLogError("Please check your password and email");
-    // })
   };
   const handGoogleSignIn = () => {
     signInWithGoogle()
@@ -85,7 +66,7 @@ const Login = () => {
       <Header></Header>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
-          <div className="text-center ">
+          <div className="text-center mt-10">
             <h1 className="text-5xl font-bold">Login now!</h1>
           </div>
           <div className="card flex-shrink-0  w-96 shadow-2xl bg-base-100">

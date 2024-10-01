@@ -1,40 +1,86 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import logo from "../../assets/images/logo.png"
 
 const Footer = () => {
-    return (
-        <>
-          
+  return (
+    <footer className="bg-green-900 text-white py-10">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Left Section - Brand and Social Icons */}
+          <div className="flex flex-col">
+            <img className="w-44 p-2" src={logo} alt="" />
+            <p className="text-sm mb-4">
+              Join now to receive personalized recommendations from the full
+              course catalog.
+            </p>
+            <div className="flex space-x-4">
+              <FaInstagram
+                className="text-gray-400 hover:text-white"
+                size={24}
+              />
+              <FaTwitter className="text-gray-400 hover:text-white" size={24} />
+              <FaFacebook
+                className="text-gray-400 hover:text-white"
+                size={24}
+              />
+              <FaYoutube className="text-gray-400 hover:text-white" size={24} />
+            </div>
+          </div>
 
-<footer className="bg-sky-800 rounded-lg shadow dark:bg-gray-900 m-4">
-    <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
-            <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+          {/* Middle Section - Company Links */}
+          <div className="flex flex-col">
+            <h3 className="text-lg font-semibold mb-2">Company</h3>
+            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
+              About us
             </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">About</a>
-                </li>
-                <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
-                </li>
-                <li>
-                    <a href="#" className="hover:underline">Contact</a>
-                </li>
-            </ul>
+            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
+              Blog
+            </a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
+              Contact us
+            </a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
+              Pricing
+            </a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white">
+              Testimonials
+            </a>
+          </div>
+
+          {/* Right Section - Support Links */}
+          <div className="flex flex-col">
+            <h3 className="text-lg font-semibold mb-2">Support</h3>
+            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
+              Help center
+            </a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
+              Terms of service
+            </a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
+              Legal
+            </a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
+              Privacy policy
+            </a>
+            <a href="#" className="text-sm text-gray-400 hover:text-white">
+              Status
+            </a>
+          </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
-    </div>
-</footer>
 
-
-
-        </>
-    );
+        {/* Bottom Copyright Section */}
+        <div className="mt-10 border-t border-gray-700 pt-4">
+          <p className="text-center text-gray-400 text-sm">
+            Designed by @Dibyendu, 2023, All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 };
+
+
 
 export default Footer;

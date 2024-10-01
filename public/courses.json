@@ -1,0 +1,79 @@
+[
+    {
+      "title": "Online Earning",
+      "image_link": "https://iili.io/dLG9F9f.png",
+      "price": "999",
+      "short_description": "Learn various ways to earn income online.",
+      "description": "Explore different online earning methods such as affiliate marketing, blogging, online surveys, freelancing, and more. This course will help you understand how to monetize your skills and ideas online."
+    },
+    {
+      "title": "Trading",
+      "image_link": "https://iili.io/dLG9Ku4.png",
+      "price": "1500",
+      "short_description": "Learn the basics of stock and cryptocurrency trading.",
+      "description": "This course provides you with a solid foundation in stock market trading and cryptocurrency. You will learn how to analyze markets, understand charts, and use trading strategies effectively."
+    },
+    {
+      "title": "Web Design",
+      "image_link": "https://iili.io/dLG9fwl.png",
+      "price": "1999",
+      "short_description": "Create stunning websites with modern web design techniques.",
+      "description": "Master the art of web design by learning HTML, CSS, JavaScript, and responsive design. This course will teach you how to build aesthetically pleasing and functional websites from scratch."
+    },
+    {
+      "title": "WordPress",
+      "image_link": "https://iili.io/dLG9qt2.png",
+      "price": "3000",
+      "short_description": "Build professional websites using WordPress.",
+      "description": "This course will guide you through creating and managing WordPress websites, customizing themes, using plugins, and optimizing websites for SEO. Perfect for anyone looking to create a website without coding."
+    },
+    {
+      "title": "Computer Application",
+      "image_link": "https://iili.io/dLEyyGt.png",
+      "price": "1400",
+      "short_description": "Learn the fundamentals of computer applications including MS Office, internet usage, and more.",
+      "description": "This course is designed for individuals who want to enhance their computer literacy. You'll gain practical knowledge of various computer applications used in both personal and professional settings."
+    },
+    {
+      "title": "Data Analytics",
+      "image_link": "https://iili.io/dLG996X.png",
+      "price": "3000",
+      "short_description": "Master data analytics skills to make data-driven decisions.",
+      "description": "This course covers the basics and advanced techniques of data analytics, including data collection, processing, and visualization. Learn how to use tools like Excel, Power BI, and Python for data analytics."
+    },
+    {
+      "title": "Digital Marketing",
+      "image_link": "https://iili.io/dLEyDjp.png",
+      "price": "5000",
+      "short_description": "Understand the key components of digital marketing and grow your online presence.",
+      "description": "Learn how to leverage the power of digital platforms to create effective marketing campaigns. This course includes SEO, social media marketing, content marketing, and paid advertising techniques."
+    },
+    {
+      "title": "Ethical Hacking",
+      "image_link": "https://iili.io/dLG9JFn.png",
+      "price": "4000",
+      "short_description": "Learn the ethical hacking skills to protect and secure systems.",
+      "description": "This course will guide you through the methods and techniques used by ethical hackers to test and protect systems. Learn penetration testing, network security, and how to handle cyber threats."
+    },
+    {
+      "title": "Graphic Design",
+      "image_link": "https://iili.io/dLG928G.png",
+      "price": "3000",
+      "short_description": "Become a professional graphic designer with hands-on tools and techniques.",
+      "description": "In this course, you will learn the essentials of graphic design, including working with tools like Adobe Photoshop, Illustrator, and InDesign. You'll be able to create logos, posters, banners, and other visual content."
+    },
+    {
+      "title": "Complete Basic to Advanced Javascript",
+      "image_link": "https://abctrainings.in/media/thumbnails/Java_script.jpg",
+      "price": "299",
+      "short_description": "JavaScript Training provides an overview of essential web development languages",
+      "description": "JavaScript training to offer an in-depth understanding of the topics you need to clear the Certified JavaScript Professional exam and get job-ready for JavaScript skills-relevant roles. In these 28-hour practical-oriented sessions, you will learn everything to become proficient in using JavaScript and building web products. Choose from either live-online or self-paced learning modes to learn and apply these skills to various JavaScript roles in real-time projects."
+    },
+    {
+      "title": "Freelancing",
+      "image_link": "https://iili.io/dLG9das.png",
+      "price": "2000",
+      "short_description": "Discover the secrets to becoming a successful freelancer.",
+      "description": "This course covers everything from setting up your freelancing profile to securing clients, managing projects, and maintaining work-life balance. Perfect for those looking to start a freelancing career."
+    }
+]

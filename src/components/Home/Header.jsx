@@ -1,124 +1,17 @@
 /* eslint-disable no-unused-vars */
-// /* eslint-disable no-unused-vars */
-// //import React, { useContext } from 'react';
-// import { Link, NavLink } from "react-router-dom";
-// import useAuth from "../../Hooks/useAuth";
-// import Container from "../Container/Container";
-// import { FiSun } from "react-icons/fi";
-// import { IoMoonOutline } from "react-icons/io5";
-// import useTheme from "../../Hooks/useTheme";
-
-// //import { AuthContext } from '../../Provider/AuthProvider';
-
-// const Header = () => {
-//   const { theme, toggleTheme } = useTheme();
-
-//   const { user, logOut } = useAuth();
-//   console.log(user);
-//   const handleLogOut = () => {
-//     logOut()
-//       .then(() => console.log("your logged out now"))
-//       .catch((error) => console.log(error));
-//   };
-
-//   const navLinks = (
-//     <>
-//       <li>
-//         <NavLink to="/">Home</NavLink>
-//       </li>
-//       <li>
-//         <NavLink to="/addproduct">Add Product</NavLink>
-//       </li>
-//       <li>
-//         <NavLink to="/displayproduct">ShopPage</NavLink>
-//       </li>
-//       <li>
-//         <NavLink to="/cart">MyCart</NavLink>
-//       </li>
-
-//       {user && <></>}
-//     </>
-//   );
-//   return (
-//     <div className="navbar shadow-xl dark:text-white ">
-//       <div className="navbar-start">
-//         <div className="dropdown">
-//           <label tabIndex={0} className="btn btn-ghost lg:hidden">
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               className="h-5 w-5"
-//               fill="none"
-//               viewBox="0 0 24 24"
-//               stroke="currentColor"
-//             >
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 strokeWidth="2"
-//                 d="M4 6h16M4 12h8m-8 6h16"
-//               />
-//             </svg>
-//           </label>
-//           <ul
-//             tabIndex={0}
-//             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100  rounded-box w-52"
-//           >
-//             {navLinks}
-//           </ul>
-//         </div>
-//         <img
-//           className="w-44"
-//           src="https://i.ibb.co/fvJq66B/Tech-Shop-1.png"
-//           alt=""
-//         />
-//       </div>
-//       <div className="navbar-center hidden lg:flex">
-//         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
-//       </div>
-//       <div className="navbar-end">
-//         {user ? (
-//           <>
-//             <img
-//               className="w-14 rounded-full avatar"
-//               src={user?.photoURL}
-//               alt=""
-//             />
-
-//             <span className="lg:mr-2">{user?.displayName}</span>
-//             {/* <span>{user.email}</span> */}
-
-//             <a onClick={handleLogOut} className="btn btn-sm">
-//               Sign out
-//             </a>
-//           </>
-//         ) : (
-//           <Link to="/login">
-//             <button className="btn mr-10 btn-sm">Login</button>
-//           </Link>
-//         )}
-//       </div>
-//       <div className="px-4">
-//         <button className="text-2xl" onClick={toggleTheme}>
-//           {theme === "dark" ? <FiSun /> : <IoMoonOutline />}
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Header;
-
-import React from 'react';
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useRef, useEffect } from "react";
+import { FiSearch, FiSun } from "react-icons/fi";
+import { IoMoonOutline } from "react-icons/io5";
 import useAuth from "../../Hooks/useAuth";
 import useTheme from "../../Hooks/useTheme";
-
-import { FiSun } from "react-icons/fi";
-import { IoMoonOutline } from "react-icons/io5";
+import logo from "../../assets/images/logo.png";
 
 const Header = () => {
-  const { theme, toggleTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const { user, logOut } = useAuth();
+  const { theme, toggleTheme } = useTheme();
+  const dropdownRef = useRef(null); // Create a ref for the dropdown
 
   const handleLogOut = () => {
     logOut()
@@ -126,88 +19,130 @@ const Header = () => {
       .catch((error) => console.log(error));
   };
 
-  const navLinks = (
-    <>
-      <li>
-        <NavLink to="/" className="hover:text-gray-700 dark:hover:text-gray-300">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/addproduct" className="hover:text-gray-700 dark:hover:text-gray-300">Add Product</NavLink>
-      </li>
-      <li>
-        <NavLink to="/displayproduct" className="hover:text-gray-700 dark:hover:text-gray-300">Shop Page</NavLink>
-      </li>
-      <li>
-        <NavLink to="/cart" className="hover:text-gray-700 dark:hover:text-gray-300">My Cart</NavLink>
-      </li>
-    </>
-  );
+  const isAdmin = user?.email === "admin@codepee.com"; // Check if the user is admin
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="navbar fixed top-0 left-0 w-full shadow-xl dark:text-white bg-white dark:bg-gray-800 z-50">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
+    <nav className="bg-green-100 dark:bg-gray-800 fixed w-full z-20 top-0 shadow-md dark:text-white">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          <div className="w-52">
+            <img src={logo} alt="Logo" />
+          </div>
+
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Search bar with icon */}
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search courses"
+                className="border rounded px-4 py-1 focus:outline-none pl-10 dark:bg-gray-700 dark:text-white"
               />
-            </svg>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-          >
-            {navLinks}
-          </ul>
-        </div>
-        <img
-          className="w-44"
-          src="https://i.ibb.co/fvJq66B/Tech-Shop-1.png"
-          alt="Tech Shop"
-        />
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navLinks}
-        </ul>
-      </div>
-      <div className="navbar-end flex items-center">
-        {user ? (
-          <>
-            <img
-              className="w-14 rounded-full avatar"
-              src={user?.photoURL}
-              alt={user?.displayName}
-            />
-            <span className="lg:mr-2">{user?.displayName}</span>
-            <button onClick={handleLogOut} className="btn btn-sm">
-              Sign out
+              <FiSearch className="absolute right-2 top-2 text-gray-500 dark:text-white" size={20} />
+            </div>
+            <a href="/" className="text-gray-800 hover:text-green-600 dark:text-gray-300">Home</a>
+            <a href="/course" className="text-gray-800 hover:text-green-600 dark:text-gray-300">Courses</a>
+           
+           {isAdmin && (
+  <>
+    <a href="/dashboard" className="text-gray-800 hover:text-green-600 dark:text-gray-300">
+      Dashboard
+    </a>
+   
+  </>
+)}
+
+            <a href="/community" className="text-gray-800 hover:text-green-600 dark:text-gray-300">Tech community</a>
+            <a href="/support" className="text-gray-800 hover:text-green-600 dark:text-gray-300">Support</a>
+
+            {user ? (
+              <div className="relative" ref={dropdownRef}>
+                <button onClick={() => setDropdownOpen(!dropdownOpen)} className="flex items-center space-x-2">
+                  <img className="w-10 h-10 rounded-full" src={user.photoURL} alt={user.displayName} />
+                  <span>{user.displayName} </span>
+                </button>
+                {dropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                    <div className="py-2">
+                      <a href="/profile" className="block px-4 py-2 text-gray-800 hover:bg-green-400 hover:text-white">My Profile</a>
+                      <a href="/mycourse" className="block px-4 py-2 text-gray-800 hover:bg-green-400 hover:text-white">My Courses</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-green-400 hover:text-white">Notice</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-grhover:bg-green-400 hover:bg-green-400 hover:text-white">Certificate</a>
+                      <button onClick={handleLogOut} className="m-2 text-left p-2 rounded-lg bg-blue-500 text-cyan-50 hover:bg-emerald-600">
+                        Sign out
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <a href="/login" className="bg-green-600 text-white px-4 py-2 rounded-md">Sign in</a>
+            )}
+
+            {/* Dark/Light mode toggle button */}
+            <button className="text-2xl ml-4" onClick={toggleTheme} aria-label="Toggle Theme">
+              {theme === "dark" ? <FiSun /> : <IoMoonOutline />}
             </button>
-          </>
-        ) : (
-          <Link to="/login">
-            <button className="btn mr-10 btn-sm">Login</button>
-          </Link>
-        )}
-        <button
-          className="text-2xl ml-4"
-          onClick={toggleTheme}
-          aria-label="Toggle Theme"
-        >
-          {theme === "dark" ? <FiSun /> : <IoMoonOutline />}
-        </button>
+          </div>
+
+          {/* Hamburger Menu for Mobile */}
+          <div className="flex items-center md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-green-600 dark:text-white">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-green-100 dark:bg-gray-800 w-full">
+          <div className="px-4 pt-2 pb-3 space-y-1">
+            <input
+              type="text"
+              placeholder="Search courses"
+              className="border rounded w-full px-2 py-1 focus:outline-none dark:bg-gray-700 dark:text-white"
+            />
+            <a href="/" className="block text-gray-800 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700 px-3 py-2 rounded-md">Home</a>
+            <a href="/course" className="block text-gray-800 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700 px-3 py-2 rounded-md">Courses</a>
+            {isAdmin && (
+              <a href="/addcourse" className="block text-gray-800 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700 px-3 py-2 rounded-md">Add Courses</a>
+            )}
+            <a href="#" className="block text-gray-800 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700 px-3 py-2 rounded-md">Blogs</a>
+            <a href="#" className="block text-gray-800 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700 px-3 py-2 rounded-md">Notice</a>
+
+            {user ? (
+              <div className="flex items-center space-x-2">
+                <img className="w-14 h-10 rounded-full" src={user.photoURL} alt="User" />
+                <span>{user.displayName}</span>
+                <button onClick={handleLogOut} className="block bg-green-600 text-white px-4 py-2 rounded-md text-center">Sign out</button>
+              </div>
+            ) : (
+              <a href="/login" className="block bg-green-600 text-white px-4 py-2 rounded-md text-center">Sign in</a>
+            )}
+
+            <button className="text-2xl ml-4" onClick={toggleTheme} aria-label="Toggle Theme">
+              {theme === "dark" ? <FiSun /> : <IoMoonOutline />}
+            </button>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
 

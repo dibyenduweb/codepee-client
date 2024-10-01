@@ -68,14 +68,6 @@ const [regError, setRegError] = useState('');
 
       })
         
-      
-
-      
-      // .catch(error =>{
-      //   console.error(error);
-      //   //setRegError(error.message);
-      //   setRegError('Email address already used');
-      // })
 
     }
 
@@ -84,7 +76,7 @@ const [regError, setRegError] = useState('');
       <Header></Header>
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
-          <div className="text-center ">
+          <div className="text-center mt-12">
             <h1 className="text-5xl font-bold">Register!</h1>
            
           </div>

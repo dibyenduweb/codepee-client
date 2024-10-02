@@ -20,6 +20,9 @@ import Enroll from "./components/Pages/Enroll";
 import AdminRoot from "./Admin/AdminRoot/AdminRoot";
 import AdminDashboard from "./Admin/AdminDashboard/AdminDashboard";
 import Video from "./components/Video/Video";
+import Community from "./PageImp/community";
+import Support from "./PageImp/Support";
+import Files from "./PageImp/Files";
 // import Product from "./components/Home/Product";
 
 const router = createBrowserRouter([
@@ -39,6 +42,14 @@ const router = createBrowserRouter([
         element:<Coures/>,
         loader: () => fetch('http://localhost:5000/course')
       },
+      {
+        path:"/community",
+        element:<Community/>
+      },
+      {
+        path:"/support",
+        element:<Support/>
+      },
       
       
       {
@@ -55,7 +66,10 @@ const router = createBrowserRouter([
       {
         path:"/videos",
         element: <PrivateRoute><Video/></PrivateRoute>,
-       
+      },
+      {
+        path:"/file",
+        element: <PrivateRoute><Files/></PrivateRoute>,
       },
       {
         path: "/login",

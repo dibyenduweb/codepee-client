@@ -26,14 +26,14 @@ const MyCourses = () => {
                 className="w-full"
               />
               <div className="p-4">
-                <h5 className="text-lg font-semibold mb-2">{course.title}</h5>
-                <p className="text-gray-700 mb-4">{course.short_description}</p>
-                <button
+                <h5 className="text-lg font-semibold mb-2">{course.title} </h5> 
+                <p className="text-blue-700 text-xl font-bold mb-4">Price:₹{course.price}<span className="text-sm bg-red-600 px-1 rounded-md text-white">Pending</span></p>
+                {/* <button
                   className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
                   disabled
                 >
                   Enrolled
-                </button>
+                </button> */}
                <Link to="/videos">
                <button
                   className="ml-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed"

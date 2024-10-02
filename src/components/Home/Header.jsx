@@ -80,6 +80,7 @@ const Header = () => {
                       <a href="/profile" className="block px-4 py-2 text-gray-800 hover:bg-green-400 hover:text-white">My Profile</a>
                       <a href="/mycourse" className="block px-4 py-2 text-gray-800 hover:bg-green-400 hover:text-white">My Courses</a>
                       <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-green-400 hover:text-white">Notice</a>
+                      <a href="/file" className="block px-4 py-2 text-gray-800 hover:bg-green-400 hover:text-white">Files</a>
                       <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-grhover:bg-green-400 hover:bg-green-400 hover:text-white">Certificate</a>
                       <button onClick={handleLogOut} className="m-2 text-left p-2 rounded-lg bg-blue-500 text-cyan-50 hover:bg-emerald-600">
                         Sign out

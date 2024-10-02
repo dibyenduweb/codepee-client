@@ -23,8 +23,6 @@ const Profile = () => {
     <div>
       <h1 className="text-3xl font-bold">{user?.displayName}</h1>
       <p className="py-6">{user?.email}</p>
-      <p>Phone: 000000000</p>
-      
       <p className="btn btn-sm my-2">Change Password</p> <br />
       <a onClick={handleLogOut} className='btn btn-secondary'>Sign out</a>
     </div>

@@ -1,0 +1,95 @@
+{
+    "reviews": [
+      {
+        "id": 1,
+        "name": "আরিজ স্বরূপ",
+        "image": "https://imgcdn.stablediffusionweb.com/2024/3/24/17ee935b-c63a-4374-8fc3-91b2559e02f2.jpg",
+        "review": {
+          "bengali": "আমি কোডিং শিখে সত্যিই অনেক কিছু শিখেছি। শিক্ষকরা খুব সহযোগী।",
+          "english": "I have learned a lot from coding. The instructors are very supportive."
+        }
+      },
+      {
+        "id": 2,
+        "name": "সিতারামী দেবী",
+        "image": "https://t4.ftcdn.net/jpg/02/79/66/93/360_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg",
+        "review": {
+          "bengali": "এটি আমার জন্য একটি অসাধারণ অভিজ্ঞতা ছিল। কোডিংকে আমি নতুনভাবে বুঝতে পেরেছি।",
+          "english": "It was an amazing experience for me. I learned to understand coding in a new way."
+        }
+      },
+      {
+        "id": 3,
+        "name": "রোহিত বণিক",
+        "image": "https://imgcdn.stablediffusionweb.com/2024/3/24/17ee935b-c63a-4374-8fc3-91b2559e02f2.jpg",
+        "review": {
+          "bengali": "আমি এখানে কোডিং শিখতে এসে সত্যিই অনেক কিছু জানলাম।",
+          "english": "I learned a lot by coming here to learn coding."
+        }
+      },
+      {
+        "id": 4,
+        "name": "অলকা মুখার্জি",
+        "image": "https://t4.ftcdn.net/jpg/02/79/66/93/360_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg",
+        "review": {
+          "bengali": "কোডিং শিখা ছিল দুর্দান্ত। এটা আমাকে আমার ক্যারিয়ার গড়তে সাহায্য করবে।",
+          "english": "Learning coding was great. It will help me build my career."
+        }
+      },
+      {
+        "id": 5,
+        "name": "অবিনাশ দত্ত",
+        "image": "https://imgcdn.stablediffusionweb.com/2024/3/24/17ee935b-c63a-4374-8fc3-91b2559e02f2.jpg",
+        "review": {
+          "bengali": "আমি এখানে কোডিং শিখে অনেক নতুন প্রযুক্তি সম্পর্কে জানতে পেরেছি।",
+          "english": "I've learned about many new technologies while studying coding here."
+        }
+      },
+      {
+        "id": 6,
+        "name": "পূজা সেনগুপ্ত",
+        "image": "https://t4.ftcdn.net/jpg/02/79/66/93/360_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg",
+        "review": {
+          "bengali": "এই কোর্সটি আমার জন্য সত্যিই কার্যকর ছিল। আমি অনেক কিছু শিখেছি।",
+          "english": "This course was really effective for me. I learned a lot."
+        }
+      },
+      {
+        "id": 7,
+        "name": "সুরজিত কর",
+        "image": "https://imgcdn.stablediffusionweb.com/2024/3/24/17ee935b-c63a-4374-8fc3-91b2559e02f2.jpg",
+        "review": {
+          "bengali": "আমার কোডিং অভিজ্ঞতা এখানে খুব ভালো ছিল। শিক্ষকরা সাহায্য করেন।",
+          "english": "My coding experience here was very good. The teachers are helpful."
+        }
+      },
+      {
+        "id": 8,
+        "name": "মণিকা চক্রবর্তী",
+        "image": "https://t4.ftcdn.net/jpg/02/79/66/93/360_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg",
+        "review": {
+          "bengali": "এই কোর্সের জন্য আমি কৃতজ্ঞ। কোডিং শিখতে অনেক সহজ হয়েছে।",
+          "english": "I am grateful for this course. Learning to code has become much easier."
+        }
+      },
+      {
+        "id": 9,
+        "name": "শিবম মিত্র",
+        "image": "https://imgcdn.stablediffusionweb.com/2024/3/24/17ee935b-c63a-4374-8fc3-91b2559e02f2.jpg",
+        "review": {
+          "bengali": "এখানে কোডিং শিখার মাধ্যমে আমি আমার দক্ষতা বৃদ্ধি করেছি।",
+          "english": "By learning coding here, I have enhanced my skills."
+        }
+      },
+      {
+        "id": 10,
+        "name": "শ্রেয়া বন্দ্যোপাধ্যায়",
+        "image": "https://t4.ftcdn.net/jpg/02/79/66/93/360_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg",
+        "review": {
+          "bengali": "এই কোর্সটি আমার জন্য খুব সহায়ক ছিল। আমি কোডিংয়ে আত্মবিশ্বাসী বোধ করছি।",
+          "english": "This course was very helpful for me. I feel confident in coding now."
+        }
+      }
+    ]
+  }
+  

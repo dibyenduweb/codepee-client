@@ -20,7 +20,6 @@ import Enroll from "./components/Pages/Enroll";
 import AdminRoot from "./Admin/AdminRoot/AdminRoot";
 import AdminDashboard from "./Admin/AdminDashboard/AdminDashboard";
 import Video from "./components/Video/Video";
-import Community from "./PageImp/community";
 import Support from "./PageImp/Support";
 import Files from "./PageImp/Files";
 import Assignment from "./PageImp/Assignment";
@@ -43,10 +42,10 @@ const router = createBrowserRouter([
         element:<Coures/>,
         loader: () => fetch('https://codepee-server.vercel.app/course')
       },
-      {
-        path:"/community",
-        element:<PrivateRoute><Community/></PrivateRoute>
-      },
+      // {
+      //   path:"/community",
+      //   element:<PrivateRoute><Community/></PrivateRoute>
+      // },
       {
         path:"/support",
         element:<Support/>

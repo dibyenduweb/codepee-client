@@ -65,7 +65,6 @@ const Header = () => {
   </>
 )}
 
-            <a href="/community" className="text-gray-800 hover:text-green-600 dark:text-gray-300">Tech community</a>
             <a href="/support" className="text-gray-800 hover:text-green-600 dark:text-gray-300">Support</a>
 
             {user ? (

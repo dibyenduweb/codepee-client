@@ -23,6 +23,7 @@ import Video from "./components/Video/Video";
 import Community from "./PageImp/community";
 import Support from "./PageImp/Support";
 import Files from "./PageImp/Files";
+import Assignment from "./PageImp/Assignment";
 // import Product from "./components/Home/Product";
 
 const router = createBrowserRouter([
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
       {
         path:"/course",
         element:<Coures/>,
-        loader: () => fetch('http://localhost:5000/course')
+        loader: () => fetch('https://codepee-server.vercel.app/course')
       },
       {
         path:"/community",
@@ -56,12 +57,12 @@ const router = createBrowserRouter([
         path: "/enroll/:id",
         element: <PrivateRoute><Enroll/></PrivateRoute>,
         loader: ({ params }) => 
-          fetch(`http://localhost:5000/course/${params.id}`)
+          fetch(`https://codepee-server.vercel.app/course/${params.id}`)
       },
       {
         path:"/mycourse",
         element: <PrivateRoute><MyCourses/></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/mycourse")
+        loader: () => fetch("https://codepee-server.vercel.app/mycourse")
       },
       {
         path:"/videos",
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path:"/file",
         element: <PrivateRoute><Files/></PrivateRoute>,
+      },
+      {
+        path:"/test",
+        element: <PrivateRoute><Assignment/></PrivateRoute>,
       },
       {
         path: "/login",
@@ -106,13 +111,13 @@ const router = createBrowserRouter([
       {
         path:"/dashboard/courselist",
         element:<PrivateRoute><CouresList/></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/course')
+        loader: () => fetch('https://codepee-server.vercel.app/course')
       },
       {
         path: "/dashboard/courseupdate/:id",
         element: <PrivateRoute><UpdateCourse /></PrivateRoute>,
         loader: ({ params }) => 
-          fetch(`http://localhost:5000/course/${params.id}`)
+          fetch(`https://codepee-server.vercel.app/course/${params.id}`)
       },
       
      

@@ -23,7 +23,7 @@ const UpdateCourse = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/course/${updateData._id}`, {
+      const response = await fetch(`https://codepee-server.vercel.app/course/${updateData._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

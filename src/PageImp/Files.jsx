@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { FaFilePdf, FaVideo, FaCode, FaImage } from 'react-icons/fa';
 

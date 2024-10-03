@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/community",
-        element:<Community/>
+        element:<PrivateRoute><Community/></PrivateRoute>
       },
       {
         path:"/support",
@@ -120,9 +120,7 @@ const router = createBrowserRouter([
           fetch(`https://codepee-server.vercel.app/course/${params.id}`)
       },
       
-     
-     
-     
+
     ],
   },
 

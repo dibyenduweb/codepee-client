@@ -36,36 +36,28 @@ const Footer = () => {
               About us
             </a>
             <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
-              Blog
+              We are Hiring
             </a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
-              Contact us
-            </a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
-              Pricing
-            </a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white">
-              Testimonials
-            </a>
+         
+         
+          
+            
           </div>
 
           {/* Right Section - Support Links */}
           <div className="flex flex-col">
             <h3 className="text-lg font-semibold mb-2">Support</h3>
-            <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
+            <a href="/support" className="text-sm text-gray-400 hover:text-white mb-1">
               Help center
             </a>
             <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
               Terms of service
             </a>
             <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
-              Legal
+              Refund Policy
             </a>
             <a href="#" className="text-sm text-gray-400 hover:text-white mb-1">
-              Privacy policy
-            </a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white">
-              Status
+              Privacy Policy
             </a>
           </div>
         </div>

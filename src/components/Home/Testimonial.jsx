@@ -1,8 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const Testimonial = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -12,7 +9,7 @@ const Testimonial = () => {
     const fetchTestimonials = async () => {
       try {
         // Replace this URL with your actual API endpoint
-        const response = await fetch('../../../public/review.json');
+        const response = await fetch('/review.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -27,23 +24,15 @@ const Testimonial = () => {
     fetchTestimonials();
   }, []);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   if (loading) {
     return <div className="text-center">Loading testimonials...</div>;
   }
 
   return (
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-extrabold text-center mb-12">What Our Student Say</h2>
+      <h2 className="text-3xl font-extrabold text-center mb-12">What Our Students Say</h2>
 
-      <Slider {...settings}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-lg text-center">
             <img 
@@ -56,7 +45,7 @@ const Testimonial = () => {
             <p className="text-sm text-gray-500">{testimonial.title}</p>
           </div>
         ))}
-      </Slider>
+      </div>
     </div>
   );
 };

@@ -1,20 +1,20 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect, useRef } from "react";
-import { FiSearch, FiSun } from "react-icons/fi";
+import { FiSun } from "react-icons/fi";
 import { IoMoonOutline } from "react-icons/io5";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
-import useAuth from "../../Hooks/useAuth"; // Custom hook for authentication
-import useTheme from "../../Hooks/useTheme"; // Custom hook for theme toggle
-import logo from "../../assets/images/logo.png"; // Import your logo
-import SideMenu from "../sidemenu/SideMenu";
+import { useNavigate } from "react-router-dom"; 
+import useAuth from "../../Hooks/useAuth";
+import useTheme from "../../Hooks/useTheme";
+import logo from "../../assets/images/logo.png";
 
 const AdminDashboard = () => {
-  const [isOpen, setIsOpen] = useState(false); // Dropdown state
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
-  const { user, logOut } = useAuth(); // Authentication hook
-  const { theme, toggleTheme } = useTheme(); // Theme toggle hook
-  const navigate = useNavigate(); // Hook for navigation
+  const [isOpen, setIsOpen] = useState(false); 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { user, logOut } = useAuth(); 
+  const { theme, toggleTheme } = useTheme(); 
+  const navigate = useNavigate(); 
 
-  const isAdmin = user?.email === "admin@codepee.com"; // Check if the user is admin
+  const isAdmin = user?.email === "admin@codepee.com"; 
 
   const dropdownRef = useRef(null);
   const mobileMenuRef = useRef(null);
@@ -40,7 +40,7 @@ const AdminDashboard = () => {
     logOut()
       .then(() => {
         console.log("Logged out");
-        navigate("/"); // Redirect to home page after logout
+        navigate("/"); 
       })
       .catch((error) => console.log(error));
   };
@@ -51,6 +51,7 @@ const AdminDashboard = () => {
   }
 
   return (
+ <>
     <div className=" bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
       {/* Header */}
       <header className="bg-white dark:bg-gray-900 shadow">
@@ -152,6 +153,7 @@ const AdminDashboard = () => {
         </div>
       )}
     </div>
+ </>
   );
 };
 

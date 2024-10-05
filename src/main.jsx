@@ -23,6 +23,7 @@ import Video from "./components/Video/Video";
 import Support from "./PageImp/Support";
 import Files from "./PageImp/Files";
 import Assignment from "./PageImp/Assignment";
+import Ecourse from "./components/Pages/Ecourse";
 // import Product from "./components/Home/Product";
 
 const router = createBrowserRouter([
@@ -63,6 +64,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute><MyCourses/></PrivateRoute>,
         loader: () => fetch("https://codepee-server.vercel.app/mycourse")
       },
+     
       {
         path:"/videos",
         element: <PrivateRoute><Video/></PrivateRoute>,
@@ -117,6 +119,11 @@ const router = createBrowserRouter([
         element: <PrivateRoute><UpdateCourse /></PrivateRoute>,
         loader: ({ params }) => 
           fetch(`https://codepee-server.vercel.app/course/${params.id}`)
+      },
+      {
+        path:"/dashboard/ecourse",
+        element: <PrivateRoute><Ecourse/></PrivateRoute>,
+        loader: () => fetch("https://codepee-server.vercel.app/mycourse")
       },
       
 

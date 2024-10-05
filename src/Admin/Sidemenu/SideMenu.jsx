@@ -1,20 +1,21 @@
 /* eslint-disable no-unused-vars */
-
-
 import React from "react";
-import { Link } from "react-router-dom"; // Use Link for internal navigation
-import useTheme from "../../Hooks/useTheme"; // Custom hook for theme toggle
+import { Link } from "react-router-dom";
+import useTheme from "../../Hooks/useTheme";
+import AdminDashboard from "../AdminDashboard/AdminDashboard";
 
 const SideMenu = () => {
-  const { theme } = useTheme(); // Theme toggle hook
-  
+  const { theme } = useTheme();
+
   return (
-    <nav className="bg-white dark:bg-gray-900 w-64">
+    
+<>
+<nav className="bg-white dark:bg-gray-900 w-64 h-screen mt-32">
       <div className="px-8 py-4">
         <ul>
           <li>
             <Link
-              to="http://localhost:5173/dashboard"
+              to="/dashboard"
               className="block text-gray-800 dark:text-white py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
             >
               Dashboard
@@ -33,12 +34,20 @@ const SideMenu = () => {
               to="/dashboard/courselist"
               className="block text-gray-800 dark:text-white py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
             >
-             CourseList
+              Course List
             </Link>
           </li>
           <li>
             <Link
-              to="#"
+              to="/dashboard/ecourse"
+              className="block text-gray-800 dark:text-white py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              Enroll Course
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/dashboard/accountsettings"
               className="block text-gray-800 dark:text-white py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
             >
               Account Settings
@@ -47,12 +56,8 @@ const SideMenu = () => {
         </ul>
       </div>
     </nav>
+</>
   );
 };
-
-
-
-
-
 
 export default SideMenu;

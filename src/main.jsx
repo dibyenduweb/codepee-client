@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       {
         path:"/course",
         element:<Coures/>,
-        loader: () => fetch('https://codepee-server.vercel.app/course')
+        loader: () => fetch('http://localhost:5000/course')
       },
       // {
       //   path:"/community",
@@ -57,12 +57,12 @@ const router = createBrowserRouter([
         path: "/enroll/:id",
         element: <PrivateRoute><Enroll/></PrivateRoute>,
         loader: ({ params }) => 
-          fetch(`https://codepee-server.vercel.app/course/${params.id}`)
+          fetch(`http://localhost:5000/course/${params.id}`)
       },
       {
         path:"/mycourse",
         element: <PrivateRoute><MyCourses/></PrivateRoute>,
-        loader: () => fetch("https://codepee-server.vercel.app/mycourse")
+        loader: () => fetch("http://localhost:5000/enrollcourse")
       },
      
       {
@@ -112,18 +112,18 @@ const router = createBrowserRouter([
       {
         path:"/dashboard/courselist",
         element:<PrivateRoute><CouresList/></PrivateRoute>,
-        loader: () => fetch('https://codepee-server.vercel.app/course')
+        loader: () => fetch('http://localhost:5000/course')
       },
       {
         path: "/dashboard/courseupdate/:id",
         element: <PrivateRoute><UpdateCourse /></PrivateRoute>,
         loader: ({ params }) => 
-          fetch(`https://codepee-server.vercel.app/course/${params.id}`)
+          fetch(`http://localhost:5000/course/${params.id}`)
       },
       {
         path:"/dashboard/ecourse",
         element: <PrivateRoute><Ecourse/></PrivateRoute>,
-        loader: () => fetch("https://codepee-server.vercel.app/mycourse")
+        loader: () => fetch("http://localhost:5000/mycourse")
       },
       
 

@@ -20,7 +20,7 @@ const AddCourse = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://codepee-server.vercel.app/course', formData);
+            const response = await axios.post('http://localhost:5000/course', formData);
             console.log('Course added:', response.data);
             // Reset form or show success message
             setFormData({

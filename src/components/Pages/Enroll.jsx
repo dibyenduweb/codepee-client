@@ -85,7 +85,7 @@ const Enroll = () => {
 
     try {
       // Send data to the backend
-      const response = await axios.post("https://codepee-server.vercel.app/mycourse", courseData);
+      const response = await axios.post("http://localhost:5000/mycourse", courseData);
       console.log("Data sent successfully:", response.data);
 
       // Close modal and reset form after successful submission

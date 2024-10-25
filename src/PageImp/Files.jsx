@@ -8,7 +8,7 @@ const Files = () => {
             <div className="bg-white p-8 rounded-lg shadow-lg w-96">
                 <div className="grid grid-cols-2 gap-4">
                     <a
-                        href="#pdf-files"
+                        href="https://drive.google.com/drive/folders/13GlYLwKPI8rnNNm0G_upJasGExxAcF70?usp=drive_link"
                         className="flex flex-col items-center bg-gray-200 p-4 rounded-lg shadow hover:bg-gray-300 transition duration-200"
                     >
                         <FaFilePdf className="text-red-600 text-4xl mb-2" />

@@ -1,10 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
-import { toast, Toaster } from 'react-hot-toast'; 
+import { toast,  } from 'react-hot-toast'; 
 
 const Ecourse = () => {
     const enrollmentsData = useLoaderData(); 
+    // eslint-disable-next-line no-unused-vars
     const { user } = useAuth();
     const [enrollments, setEnrollments] = useState(enrollmentsData);
     const [statusMessage, setStatusMessage] = useState('');
@@ -65,7 +66,7 @@ const Ecourse = () => {
     };
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-4 h-full">
             <h1 className="text-2xl font-bold mb-4">Ecourse</h1>
             {statusMessage && <div className="text-red-600 mb-4">{statusMessage}</div>}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

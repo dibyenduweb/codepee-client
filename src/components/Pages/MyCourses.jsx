@@ -12,7 +12,7 @@ const MyCourses = () => {
   const userCourses = myCourse.filter((course) => course.email === userEmail);
 
   return (
-    <div className="container mx-auto p-8 gap-3 mt-16">
+    <div className="container mx-auto p-8 gap-3 mt-16 h-screen">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {userCourses.length > 0 ? (
           userCourses.map((course, index) => (

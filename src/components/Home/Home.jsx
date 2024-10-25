@@ -5,9 +5,6 @@ import Header from "./Header";
 import Container from "../Container/Container";
 import Banner from "./Banner";
 import Testimonial from "./Testimonial";
-
-
-
 const Home = () => {
     const brandData = useLoaderData();
     console.log(brandData);
@@ -17,8 +14,6 @@ const Home = () => {
         <Header/>
      <Banner/>
      <Testimonial/>
-     
-     
       </Container>
             </>
        

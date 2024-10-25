@@ -13,7 +13,7 @@ const Ecourse = () => {
     // Function to send enrollment data to MongoDB
     const sendDataToMongoDB = async (data) => {
         try {
-            const response = await fetch("http://localhost:5000/enrollcourse", {
+            const response = await fetch("https://codepee-server.vercel.app/enrollcourse", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const Ecourse = () => {
     // Function to handle removal of an enrollment
     const handleRemove = async (_id) => {
         try {
-            const response = await fetch(`http://localhost:5000/mycourse/${_id}`, {
+            const response = await fetch(`https://codepee-server.vercel.app/mycourse/${_id}`, {
               method: "DELETE",
             });
       

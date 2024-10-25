@@ -9,7 +9,7 @@ const CourseList = () => {
   // Delete function
   const handleDelete = async (_id) => {
     try {
-      const response = await fetch(`http://localhost:5000/course/${_id}`, {
+      const response = await fetch(`https://codepee-server.vercel.app/course/${_id}`, {
         method: "DELETE",
       });
 
